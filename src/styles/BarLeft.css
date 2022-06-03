@@ -1,0 +1,342 @@
+.barLeft-active,
+.barLeft-hidden{
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  background: var(--bgSecondary);
+  position: fixed;
+  height: 100vh;
+  z-index: 10;
+  top: 50px;
+}
+
+.barLeft-active{
+  visibility: visible;
+  transform: translateX(0);
+  transition: transform 500ms;
+  }
+
+  .barLeft-hidden ~ .content{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .barLeft-hidden{
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: transform 500ms, 
+    visibility 0ms 500ms;
+  }
+  
+  .barLeftContent{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .logo{
+    width: 150px;
+    height: 70px;
+    
+  }
+  
+  .barLeftBox{
+    display: flex;
+    width: 100%;
+    height: 160px;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+    
+  
+  }
+   
+  .barLeftBox:first-child{
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    height: 58px;
+  }
+
+  .boxTitle{
+    background: transparent;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    text-align: center;
+    color: rgb(122,123,130.1);
+    width: 60%;
+    text-align: left;
+    padding: 3px;
+    font-weight:bold;
+  }
+  
+  .barLeftButton{
+    background: transparent;
+    border:none;
+    padding: 3px;
+    height: 35px;
+    width: 100%;
+    color:rgb(61,62,68.1);
+    font-size: medium;
+   
+  }
+  
+  .barLeftButton:first-child{
+    background-color: rgb(0, 31, 184);
+  }
+  
+  .barLeftButton:active{
+    background: transparent;
+    color:rgb(61,62,68.1);
+  }
+  
+  .barLeftButton:hover{
+    background:rgb(61,62,68.1);
+    color:white;
+  }
+
+  .barLeftContent  .btnPageContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+  }
+
+  .barLeftContent  .btnPage,
+  .btnPage-active{
+    width: 100%;
+    font-size: larger;
+    height: 80px;
+    background: transparent;
+  }
+
+  .barLeftContent  .btnPage-active{
+    color: var(--textPrimary);
+    padding-right: 0;
+    font-weight: 600;
+    border-right: 5px solid var(--color);
+    width: 100%;
+  }
+
+  @media (max-width: 912px){
+
+    .barLeftBox:first-child{
+    align-items: center;
+    flex-direction: row;
+    height: 58px;
+    display: flex;
+    width: 26%;
+    justify-content: flex-end;
+    margin: 0;
+   }
+
+   .btnPageContainer div{
+    width: 85%;
+    font-size: larger;
+    background: transparent;
+  }
+
+  .btnPageContainer div button{
+    width: 100%;
+    font-size: larger;
+    height: 60px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    color: var(--textSecondary);
+  }
+
+  .btnPageContainer div button p{
+    margin-right: 15px;
+  }
+
+  .btnPageContainer ul{
+    width: 100%;
+    list-style: none;
+    align-items: center;
+    color: var(--textSecondary);
+  }
+
+  .btnPageContainer ul{
+    width: 100%;
+    list-style: none;
+    align-items: center;
+    color: var(--textSecondary);
+  }
+
+  .btnPageContainer li{  
+    /* height: 32px; */
+    height: 32px;
+    width: 92%;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 4px;
+  }
+
+  .btnPageContainer li p{
+    /* width: 100%;
+    text-align: center; */
+
+    width: 100%;
+    display: flex;
+    height: -15px;
+    text-align: left;
+    padding: 6px;
+    font-size: large;
+    justify-content: flex-start;
+
+  }
+
+  .btnPageContainer div button p:first-letter {
+
+    text-transform: uppercase;
+
+}
+
+.barLeftContent .btnPage{
+  width: 85%;
+    font-size: x-large;
+    text-align: left;
+    height: 60px;
+    background: transparent;
+    padding-left: 0;
+}
+
+.barLeftContent .btnPage:first-letter {
+
+  text-transform: uppercase;
+
+}
+
+.barLeftContent .btnPageContainer{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.barLeftContent .barBtnContainer{
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  position: relative;
+}
+
+.barBtnContainer .dropMenu-active, .barBtnContainer .dropMenu-hidden{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background: var(--bgSecondary);
+  width: 100%;
+  top: 0;
+  height: 100vh;
+  align-items: center;
+}
+
+.barBtnContainer .dropMenu-hidden{
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: transform 500ms, visibility 0ms 500ms;
+}
+
+.barBtnContainer .dropMenu-active{
+  visibility: visible;
+  transform: translateX(0);
+  transition: transform 500ms;
+  
+}
+
+.barBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.barBtn button, .dropMenu-active button, .dropMenu-hidden button{
+  width: 90%;
+  height: 50px;
+  font-size: larger;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  color: var(--textPrimary);
+}
+
+.barBtn button{
+  justify-content: space-between;
+}
+
+.barBtn button::first-letter, .barBtnContainer .dropMenu-active li::first-letter, .barBtnContainer .dropMenu-hidden li::first-letter{
+  text-transform: uppercase;
+}
+
+.dropMenu-active button, .dropMenu-hidden button{
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+.dropMenu-active button span, .dropMenu-hidden button span{
+  margin-left: 15px;
+}
+
+.barBtnContainer .dropMenu-active ul, .barBtnContainer .dropMenu-hidden ul{
+  list-style: none;
+  width: 75%;
+}
+
+.barBtnContainer .dropMenu-active li, .barBtnContainer .dropMenu-hidden li{
+  height: 40px;
+  text-align: left;
+  color: var(--textSecondary);
+}
+
+.barBtnContainer li span::first-letter{
+  text-transform: uppercase;
+}
+
+.barBtnContainer .themeButton{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  color: var(--textPrimary);
+}
+
+.barBtnContainer .themeButton:hover{
+  background-color: transparent;
+  color: var(--textPrimary);
+}
+
+.barBtnContainer .themeButton span{
+  display: block;
+}
+
+.barBtnContainer .themeButton span:first-child{
+  width: 100%;
+  text-align: left;
+}
+
+.barBtnContainer .themeButton svg{
+  display: none;
+}
+
+}
+
+@media (min-width: 912px) {
+  .barLeft-active{
+    display: none;
+  }
+}

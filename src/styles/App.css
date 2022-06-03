@@ -1,0 +1,198 @@
+*{
+  padding:0;
+  margin: 0;
+}
+
+
+#root{
+  font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+:root{
+  --bg: #ffffff;
+  --bgSecondary:#f9f9f9;
+  --bgCard: #fcfcfc;
+  --textPrimary: black;
+  --textSecondary: grey;
+  --border:#e5e5e5;
+  --color:rgb(77 156 235);
+  --buttonColor:#15181d;
+}
+
+[data-theme='dark']{
+  --bg: #15181d;
+  /* --bgSecondary: #1e2127; */
+  --bgSecondary: #191c21;
+  --bgCard: #2b2e34;
+  --textPrimary: #ffffff;
+  --textSecondary: grey;
+  --border: #1e2127;
+  --buttonColor: rgb(77 156 235);
+}
+
+body, root{
+  background: var(--bg);
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  background: rgb(26,27,31.1);
+  border: none;
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  margin: 5px;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(61 62 67);
+  border-radius: 20px; 
+  border: 2px solid rgb(26,27,31.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+button{
+  cursor: pointer;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg);
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+    
+}
+
+.App{
+  transition: all .5s;
+}
+
+a{
+  text-decoration: none;
+}
+
+.FirstPage-active{
+  visibility: visible;
+}
+
+.FirstPage-hidden{
+  visibility: hidden;
+}
+
+.dropdown-active{
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-hidden{
+  display: none;
+}
+
+.dropdown-option,
+.dropdown-optionSelected
+{
+  width: 100%;
+  text-align: center;
+}
+
+.dropdown-option:first-letter {
+
+  text-transform: uppercase;
+
+}
+
+.dropdown-optionSelected{
+  background: var(--bg);
+  color: var(--textPrimary);
+}
+
+@keyframes opacityBtn {
+    0%{
+      visibility: hidden;
+    }
+    100%{
+      visibility:visible;
+    }
+}
+
+.btnScroll-active, .btnScroll-hidden{
+  z-index: 7;
+  position: fixed;
+  color: #ffffff;
+  background-color: var(--color);
+  bottom: 3%;
+  right: 5%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+}
+
+.btnScroll-active:hover{
+  background-color: rgb(92, 168, 244);
+}
+
+.btnScroll-active{
+  visibility:visible;
+}
+
+.btnScroll-hidden{
+  visibility: hidden;
+}
+
+.AlertShop-active, .AlertShop-hidden{
+  position: fixed;
+  bottom: 3%;
+  left: 3%;
+  width: 208px;
+  height: 50px;
+  color: var(--textPrimary);
+  background: var(--bgSecondary);
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: medium;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.AlertShop-active{
+  visibility: visible;
+  transform: translateY(0%);
+  transition: transform 200ms;
+}
+
+.AlertShop-hidden{
+  transform: translateY(200%);
+  transition: transform 200ms;
+}
+
+.AlertIconAdd{
+  color: var(--color);
+}
+
+.AlertIconRemove{
+  color: var(--textSecondary);
+}
+
+.infinite-scroll-component {
+  overflow-x: hidden;
+}
+
