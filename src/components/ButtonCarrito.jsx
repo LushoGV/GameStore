@@ -23,7 +23,10 @@ const ButtonCarrito = ({item}) => {
         
         checkName(item)//actualiza el boton de la carta
         localStorage.setItem('shop', localArray)//actualiza el localStorage
+
+        setTimeout(()=>{
         changeShopContent(localArray, title)//actualiza el estado que emula al localSotage y activa la señal de abajo a la izquierda
+        },500)
     }
 
     const checkName = (item) =>{ //si el item está en el localStorage, devuelve true y se cambia el boton de add por remove

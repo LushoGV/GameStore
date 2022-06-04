@@ -6,7 +6,7 @@ const SpecialPage = ({use}) => {
  
   return (
     <div className='specialPageContent'>
-      {use == '404' ? <p>error 404</p> : use == 'search' ? <p>no se han encontrado resultados</p> : <p>no tienes juegos guardados</p>}
+      {use == '404' ? <p>error 404</p> : use == 'search' ? <p>no results found</p> : <p>you don't have favorite games</p>}
       {use=='404'&&<button onClick={navigate('/')}>home</button>}
     </div>
   )

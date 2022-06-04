@@ -18,6 +18,7 @@
   --border:#e5e5e5;
   --color:rgb(77 156 235);
   --buttonColor:#15181d;
+  --shadow: #e5e5e5;
 }
 
 [data-theme='dark']{
@@ -29,6 +30,8 @@
   --textSecondary: grey;
   --border: #1e2127;
   --buttonColor: rgb(77 156 235);
+  --shadow: black;
+
 }
 
 body, root{
@@ -159,8 +162,8 @@ a{
   position: fixed;
   bottom: 3%;
   left: 3%;
-  width: 208px;
-  height: 50px;
+  width: 114px;
+  height: 47px;
   color: var(--textPrimary);
   background: var(--bgSecondary);
   z-index: 7;
@@ -199,4 +202,17 @@ a{
 .bBjxWM{
   background-color: var(--border);
   box-shadow: 0 0 1px 3px var(--border);
+}
+
+.resultsGridContainer-search .infinite-scroll-component{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 0 0 ;
+}
+
+.infinite-scroll-component__outerdiv{
+  display: flex;
+  justify-content: center;
+  
 }

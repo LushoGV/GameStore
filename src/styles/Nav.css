@@ -771,7 +771,7 @@ input:checked + .slider::before{
 
         .navInputButton,   .navShopButton{
             display: block;
-            font-size: large;
+            font-size: larger;
             /* padding: 11px; */
             display: flex;
             align-items: center;

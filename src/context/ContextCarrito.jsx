@@ -10,15 +10,17 @@ export const CarritoProvider = ({children}) => {
     const checkShop = () => localStorage.shop ? setShopContent(localStorage.shop.split(',')) : (localStorage.setItem('shop', ''), setShopContent(localStorage.shop.split(',')))
   
     const changeShopContent = (newContent, value) => {
-  
-      setTimeout(() => {
-        setAlertState(true);//activa la alerta
-      }, [1000]);
-  
-      setTimeout(() => {
-        setAlertState(false);
-      }, [5000]);
-  
+
+     
+        setTimeout(() => {
+          setAlertState(true);//activa la alerta
+        }, 1000);
+    
+        setTimeout(() => {
+          setAlertState(false);
+        }, 4000);
+    
+    
       setAlertState(false);
       setShopContent(newContent);
       setAlertStateValue(value);

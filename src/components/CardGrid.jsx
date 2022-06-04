@@ -46,7 +46,7 @@ const CardGrid = ({contentGrid}) => {
                  />)
                 })}             
             </ul>
-            </InfiniteScroll>
+  </InfiniteScroll>
   )
 }
 

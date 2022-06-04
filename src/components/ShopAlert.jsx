@@ -10,7 +10,7 @@ const ShopAlert = () => {
 
   return (
     <div className={alertState ? 'AlertShop-active' : 'AlertShop-hidden'}>
-        <span>{alertStateValue ? 'Elemento agregado' : 'Elemento eliminado'}</span><FontAwesomeIcon className={alertStateValue ? 'AlertIconAdd' : 'AlertIconRemove'} icon={faBookmark} />
+        <span>{alertStateValue ? 'Saved' : 'Removed'}</span><FontAwesomeIcon className={alertStateValue ? 'AlertIconAdd' : 'AlertIconRemove'} icon={faBookmark} />
     </div>
   )
 }

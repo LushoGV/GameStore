@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import Search from './Search'
 import { Link, useNavigate } from 'react-router-dom'
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faBars, faSearch, faTimes, faCartShopping, faAngleDown} from '@fortawesome/free-solid-svg-icons'
+import {faBars, faSearch, faTimes, faCartShopping, faAngleDown, faBookmark} from '@fortawesome/free-solid-svg-icons'
 import BarLeft from './BarLeft'
 import ThemeButton from './ThemeButton'
 import categoriesList from '../CategoriesList'
@@ -61,7 +61,8 @@ const Navbar = ({changeTheme, theme}) => {
                      changeTheme = {changeTheme}
                      theme = {theme}
                  />
-                 <Link to='/shop'><button className='navShopButton' onClick={() => setBarState(false)}><FontAwesomeIcon icon={faCartShopping} />{shopContent&&<span className='navShopButton-count'>{shopContent =='' ? 0 : shopContent.length}</span>}</button></Link>
+                 {/* <Link to='/shop'><button className='navShopButton' onClick={() => setBarState(false)}><FontAwesomeIcon icon={faCartShopping}/>{shopContent&&<span className='navShopButton-count'>{shopContent =='' ? 0 : shopContent.length}</span>}</button></Link> */}
+                 <Link to='/shop'><button className='navShopButton' onClick={() => setBarState(false)}><FontAwesomeIcon icon={faBookmark} /></button></Link>
                   <div className='navBox'>
                       <button className="navMenuButton" onClick={changeBar}>
                           {barState ? <FontAwesomeIcon icon={faTimes}/> : <FontAwesomeIcon icon={faBars}/>}

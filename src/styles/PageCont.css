@@ -81,7 +81,7 @@
 
 .card{
     display: flex;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 5px;
     flex-direction: column;
     display: flex;
@@ -96,7 +96,7 @@
 }
 
 .card:hover{
-    filter: drop-shadow(-1px 4px 6px var(--border));
+    filter: drop-shadow(-1px 4px 6px var(--shadow));
 }
 
 .card:hover img{
@@ -132,7 +132,7 @@
     border-radius: 50%;
     border: 1px solid var(--border);
     font-size: larger;
-    filter: drop-shadow(1px 1px 9px var(--textSecondary));
+    filter: drop-shadow(1px 1px 9px var(--shadow));
     background: var(--bgSecondary);
   
 }
@@ -150,7 +150,7 @@
 }
 
 .cardAddShop:hover{
-    color: var(--color);
+    border: 2px solid var(--color);
 }
 
 .cardText{

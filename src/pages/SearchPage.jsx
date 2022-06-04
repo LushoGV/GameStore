@@ -73,7 +73,7 @@ const SearchPage = () => {
   return (
     <>
           {noResults == false ? 
-            <section className='resultsGridContainer'>
+            <section className='resultsGridContainer-search'>
                 <header className='resultsPagHeader'>
                     <div className='resultsTitle'>
                       <div className='TitleContent'>
