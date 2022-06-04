@@ -160,7 +160,7 @@
     top: 230px;
     left: 0;
     background: var(--bgSecondary);
-    filter: drop-shadow(-2px -11px 31px black);
+    /* filter: drop-shadow(-2px -11px 31px black); */
     justify-content: space-between;
     align-items: center;
 
