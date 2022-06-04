@@ -6,12 +6,14 @@ import Sort from '../components/Sort'
 import SpecialPage from './SpecialPage'
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSlidersH} from '@fortawesome/free-solid-svg-icons'
+import { useLoaderContext } from '../context/ContextLoader'
 
-const SearchPage = ({changeLoader, loader}) => {
+const SearchPage = () => {
 
   const [content, setContent] = useState([])
   const [noResults, setNoResults] = useState(false)
   const [sortActive, setSortActive] = useState(true)
+  const { loader, changeLoader } = useLoaderContext()
 
   let location = useLocation()
   let query = location.pathname.slice(location.pathname.indexOf('/search=')+8, location.pathname.length) //separo la busqueda de la url

@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import categoriesList from '../hooks/CategoriesList'
+import categoriesList from '../CategoriesList'
 import { useNavigate } from 'react-router-dom'
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons'

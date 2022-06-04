@@ -2,12 +2,15 @@ import {useState, useEffect} from 'react'
 import useFetchApi from '../hooks/useFetchApi'
 import { useParams, useNavigate } from 'react-router-dom'
 import CardGrid from '../components/CardGrid'
+import { useLoaderContext } from '../context/ContextLoader'
 
-const SectionPage = ({changeLoader, loader}) => {
+const SectionPage = () => {
     
     const redirect = useNavigate()
     const params = useParams()
     const [content, setContent] = useState([])
+    const { loader, changeLoader } = useLoaderContext()
+
     const sortOptions = ["popularity","release-date","relevance"]
     let data 
     let load

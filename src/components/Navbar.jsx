@@ -5,7 +5,7 @@ import {FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBars, faSearch, faTimes, faCartShopping, faAngleDown} from '@fortawesome/free-solid-svg-icons'
 import BarLeft from './BarLeft'
 import ThemeButton from './ThemeButton'
-import categoriesList from '../hooks/CategoriesList'
+import categoriesList from '../CategoriesList'
 import { useInputContext } from '../context/ContextInput'
 import { useCarritoContext } from '../context/ContextCarrito'
 

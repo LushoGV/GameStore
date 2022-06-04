@@ -12,7 +12,7 @@ const ScrollButton = () => {
         window.scrollY > 170 ? setBtnState(true) : setBtnState(false)
       })
 
-    })
+    },[window.scrollY])
   
   return (
     <button 

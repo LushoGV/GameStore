@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import {useNavigate, useLocation} from 'react-router-dom'
 import Dropdown from './Dropdown'
-import categoriesList from '../hooks/CategoriesList'
+import categoriesList from '../CategoriesList'
 
 const Sort = () => {
 

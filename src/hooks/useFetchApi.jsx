@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
-import options from './options'
+import options from '../options'
+
 
 const useFetchApi = (param, use) => {
 

@@ -12,7 +12,6 @@ export const InputProvider = ({ children }) => {
     inputActive
   };
 
-
   return (
     <InputContext.Provider value={contextContent}>
         {children}

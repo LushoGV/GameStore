@@ -2,12 +2,16 @@ import { useState, useEffect } from "react";
 import {useParams,useNavigate,Outlet,} from "react-router-dom";
 import CardGrid from "../components/CardGrid";
 import Section from "../components/Section";
+import { useLoaderContext } from "../context/ContextLoader";
 import useFetchApi from "../hooks/useFetchApi";
 
-const CategoryPage = ({ changeLoader, loader }) => {
+const CategoryPage = () => {
+
   const navigate = useNavigate();
   const params = useParams();
   const [content, setContent] = useState([]);
+  const { loader, changeLoader } = useLoaderContext()
+  
   let param;
   let textParam;
 
