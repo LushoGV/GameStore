@@ -429,9 +429,10 @@
     
     .slideTextContent{
         width: 100%;
-        padding: 4px;
+        padding: 0 4px;
         filter: drop-shadow(2px 5px 8px black);
         display: flex;
+        position: inherit;
     }
 
     .textContentTitle{

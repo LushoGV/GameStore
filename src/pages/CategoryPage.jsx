@@ -53,7 +53,7 @@ const CategoryPage = () => {
             </ul>
           </header>
           <Section
-            title="new Release"
+            title="latest releases"
             param="release-date"
           />
           <section className="resultsGridContainer">

@@ -25,13 +25,17 @@ const Dropdown = ({content,fn,modalState,titleState,text,option}) => {
         setTimeout(() => {setOptionState(false)},180)
         }}>
             <button onClick={optionsActive}>
-               <span>{text}<p>{titleState}</p></span>
+               <span>{text}<p>{titleState.includes('-') ? titleState.replace('-', ' ') : titleState}</p></span>
                 <FontAwesomeIcon icon={optionState ? faAngleUp :  faAngleDown}/>
             </button>
             <ul  className={optionState ? 'dropdown-active' : 'dropdown-hidden'}>
                 {
                     newContent.map((item, index)=>{
-                        return(<li key={index} className={checkOption(item)}><p onClick={()=>{fn(item), setOptionSelected(item)}}>{item}</p></li>)
+                        return(<li key={index} className={checkOption(item)}>
+                                    <p onClick={()=>{fn(item), setOptionSelected(item)}}>
+                                        {item.includes('-') ? item.replace('-', ' ') : item}
+                                    </p>
+                                </li>)
                     })                   
                 }
             </ul>

@@ -10,6 +10,7 @@ const SectionPage = () => {
     const params = useParams()
     const [content, setContent] = useState([])
     const { loader, changeLoader } = useLoaderContext()
+    const sortText = params.sort == 'release-date' ? 'Latest releases' : params.sort
 
     const sortOptions = ["popularity","release-date","relevance"]
     let data 
@@ -37,9 +38,9 @@ const SectionPage = () => {
       <header className='headerPage'>
         <ul>
         {
-        params.category ? <li>{params.category} / {params.sort.includes('-') ? params.sort.replace('-', ' ') : params.sort}</li> : 
-        params.platform ? <li>{params.platform} / {params.sort.includes('-') ? params.sort.replace('-', ' ') : params.sort}</li> : 
-        <li>{params.sort.includes('-') ? params.sort.replace('-', ' ') : params.sort}</li>
+          params.category ? <li><span>{params.category} /</span><span>{sortText}</span></li> : 
+          params.platform ? <li><span>{params.platform} /</span><span>{sortText}</span></li> : 
+          <li>{sortText}</li>
         }
         </ul>
       </header> 

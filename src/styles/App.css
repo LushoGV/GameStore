@@ -199,10 +199,25 @@ a{
   overflow-x: hidden;
 }
 
-.bBjxWM{
+.rec .rec-slider-container{
+  margin: 0;
+}
+
+.rec .rec-dot{
+  box-shadow: 0 0 1px 2px var(--border);
+}
+
+.rec .rec-dot_active{
   background-color: var(--border);
   box-shadow: 0 0 1px 3px var(--border);
 }
+
+/* .rec .rec-pagination{
+  /* background-color: red;
+  display: none;
+}
+*/
+
 
 .resultsGridContainer-search .infinite-scroll-component{
   display: flex;

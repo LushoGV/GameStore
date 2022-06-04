@@ -14,7 +14,7 @@ const HomePage = () => {
     <>
         <Banner/>
          <Section
-          title="new Release"
+          title="latest releases"
           param='release-date'
         />
          <Section

@@ -5,7 +5,7 @@ h2:first-letter {
 .headerPage{
     display: flex;
     width: 90%;
-    margin: 10px 0 0 0;
+    margin: 10px 0;
     max-width: 1350px;
 }
 
@@ -17,14 +17,33 @@ h2:first-letter {
 
 .headerPage li{
     font-weight: 400;
-    color: var(--textSecondary);
+    color: var(--textPrimary);
     margin: 0 5px 0 0;
     list-style: none;
     font-size: larger;
 }
 
-.headerPage li:last-child{
+/* .headerPage li:last-child{
+    color: var(--textSecondary);
+    font-weight: 400;
+} */
+
+.headerPage li span{
+    font-weight: 400;
+}
+
+.headerPage li span:nth-child(1){
+    color: var(--textSecondary);
+}
+
+.headerPage li span:nth-child(2){
     color: var(--textPrimary);
+    margin-left: 6px;
+    font-weight: 400;
+}
+
+.headerPage ul li span::first-letter{
+    text-transform: uppercase;
 }
 /* 
 .headerPage li:hover{
@@ -1403,7 +1422,7 @@ article{
     }
 
     .resultsGridContainer, .resultsGridContainer-search, .favoritesHeader{
-        width: 92%;
+        width: 90%;
     }
     .ContentGridCard{
         padding: 2px;
