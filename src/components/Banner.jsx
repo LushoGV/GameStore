@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import Search from './Search'
 import { Link } from 'react-router-dom'
 import { useInputContext } from '../context/ContextInput'
+import PexelsVideo from "../media/PexelsVideo.mp4";
 
 const Banner = () => {
 
@@ -11,7 +12,7 @@ return(
   <section className='slideSection'>
   <div className='slideContent'>
   <video autoPlay loop muted >
-      <source src='https://www.freetogame.com/g/515/videoplayback.webm'/>         
+      <source src={PexelsVideo}/>         
       {/* https://www.freetogame.com/g/452/videoplayback.webm */}
   </video>
 </div>
