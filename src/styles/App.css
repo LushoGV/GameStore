@@ -196,3 +196,7 @@ a{
   overflow-x: hidden;
 }
 
+.bBjxWM{
+  background-color: var(--border);
+  box-shadow: 0 0 1px 3px var(--border);
+}
