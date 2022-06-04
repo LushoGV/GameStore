@@ -212,6 +212,10 @@ a{
   box-shadow: 0 0 1px 3px var(--border);
 }
 
+.rec .rec-dot:active, .rec .rec-dot_active:active{
+  box-shadow: var(--color) 0px 0px 1px 3px;
+}
+
 /* .rec .rec-pagination{
   /* background-color: red;
   display: none;
