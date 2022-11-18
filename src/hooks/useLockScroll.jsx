@@ -1,18 +1,16 @@
-import { useEffect } from 'react'
+import { useEffect } from "react";
 
 const useLockScroll = (estado) => {
-  
-    const { body } = document;
+  const { body } = document;
 
-    const LockScroll = (prueba) => prueba == true ? body.style.overflow = 'hidden' : body.style.overflow = 'auto'
-        
-    useEffect(()=>{
+  const LockScroll = (prueba) =>
+    prueba == true
+      ? (body.style.overflow = "hidden")
+      : (body.style.overflow = "auto");
 
-        LockScroll(estado)
+  useEffect(() => {
+    LockScroll(estado);
+  }, [estado]);
+};
 
-    },[estado])
-
-
-}
-
-export default useLockScroll
+export default useLockScroll;

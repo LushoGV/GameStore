@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const ScrollTopRouter = () => {
-    
   const location = useLocation();
 
   useEffect(() => {
@@ -10,8 +9,6 @@ const ScrollTopRouter = () => {
   }, [location.pathname]);
 
   return null;
-}
-  
+};
 
-
-export default ScrollTopRouter
+export default ScrollTopRouter;

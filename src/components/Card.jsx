@@ -3,10 +3,10 @@ import ButtonCarrito from "./ButtonCarrito";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChrome, faWindows } from "@fortawesome/free-brands-svg-icons";
 
-const Card = ({type,title,image, id,publisher,platform,}) => {
+const Card = ({ type, title, image, id, publisher, platform }) => {
   return (
     <li className="card">
-      <ButtonCarrito item={id}/>
+      <ButtonCarrito item={id} />
       <Link to={`/game/${id}/${title}`}>
         <div className="cardImage">
           <img src={image} alt="" />

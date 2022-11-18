@@ -4,31 +4,29 @@ import useLockScroll from "../hooks/useLockScroll";
 export const LoaderContext = createContext();
 
 export const LoaderProvider = ({ children }) => {
+  const [loader, setLoader] = useState(true);
+  const changeLoader = (newState) => setLoader(newState);
 
-    const [loader, setLoader] = useState(true)
-    const changeLoader = (newState) =>setLoader(newState)
+  useLockScroll(loader);
 
-    useLockScroll(loader)
+  useEffect(() => {
+    changeLoader(false);
+  }, []);
 
-    useEffect(()=>{
-        changeLoader(false)
-    },[])
-    
-    const contextContent = {
-        loader,
-        changeLoader
-    }
+  const contextContent = {
+    loader,
+    changeLoader,
+  };
 
-    return(
+  return (
     <LoaderContext.Provider value={contextContent}>
-        {children}
+      {children}
     </LoaderContext.Provider>
-    )
-}
+  );
+};
 
-export const useLoaderContext = () =>{
+export const useLoaderContext = () => {
+  const { loader, changeLoader } = useContext(LoaderContext);
 
-    const { loader,changeLoader } = useContext(LoaderContext)
-
-    return {loader,changeLoader} 
-}
+  return { loader, changeLoader };
+};

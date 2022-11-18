@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
-import {useParams,useNavigate,Outlet,} from "react-router-dom";
+import { useParams, useNavigate, Outlet } from "react-router-dom";
 import CardGrid from "../components/CardGrid";
 import Section from "../components/Section";
 import { useLoaderContext } from "../context/ContextLoader";
 import useFetchApi from "../hooks/useFetchApi";
 
 const CategoryPage = () => {
-
   const navigate = useNavigate();
   const params = useParams();
   const [content, setContent] = useState([]);
-  const { loader, changeLoader } = useLoaderContext()
-  
+  const { loader, changeLoader } = useLoaderContext();
+
   let param;
   let textParam;
 
@@ -52,16 +51,9 @@ const CategoryPage = () => {
               )}
             </ul>
           </header>
-          <Section
-            title="latest releases"
-            param="release-date"
-          />
+          <Section title="latest releases" param="release-date" />
           <section className="resultsGridContainer">
-            {!loader && (
-              <CardGrid
-                contentGrid={content}
-              />
-            )}
+            {!loader && <CardGrid contentGrid={content} />}
           </section>
         </>
       )}

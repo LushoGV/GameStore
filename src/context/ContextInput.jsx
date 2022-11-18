@@ -1,27 +1,25 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const InputContext = createContext();
 
 export const InputProvider = ({ children }) => {
-
-  const [inputState, setInputState] = useState(false)
-  const inputActive = () => setInputState(!inputState)
+  const [inputState, setInputState] = useState(false);
+  const inputActive = () => setInputState(!inputState);
 
   const contextContent = {
     inputState,
-    inputActive
+    inputActive,
   };
 
   return (
     <InputContext.Provider value={contextContent}>
-        {children}
+      {children}
     </InputContext.Provider>
   );
 };
 
-export const useInputContext = () =>{
-  
-  const { inputState, inputActive } = useContext(InputContext)
+export const useInputContext = () => {
+  const { inputState, inputActive } = useContext(InputContext);
 
-  return {inputState, inputActive}
-}
+  return { inputState, inputActive };
+};

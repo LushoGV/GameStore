@@ -1,22 +1,20 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
-import { useEffect, useState } from "react/cjs/react.production.min";
+import { useEffect } from "react/cjs/react.production.min";
 import { useLoaderContext } from "../context/ContextLoader";
 import Loader from "./Loader";
 import Navbar from "./Navbar";
 
 const Layout = ({ changeTheme, theme }) => {
+  const { loader, changeLoader } = useLoaderContext();
 
-    const { loader, changeLoader } = useLoaderContext()
+  useEffect(() => {
+    changeLoader(false);
+  }, []);
 
-    useEffect(()=>{
-        changeLoader(false)
-      },[]) 
-   
-    return (
+  return (
     <>
       <Navbar changeTheme={changeTheme} theme={theme} />
-      {loader && <Loader/>}
+      {loader && <Loader />}
       <Outlet />
     </>
   );

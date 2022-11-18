@@ -1,10 +1,9 @@
 const Loader = () => {
-
   return (
-    <div className='spinnerPage'>
-        <div className='spinner'></div>
+    <div className="spinnerPage">
+      <div className="spinner"></div>
     </div>
-  )
-}
+  );
+};
 
-export default Loader
+export default Loader;
